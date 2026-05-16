@@ -19,6 +19,9 @@ jobs:
           environment-file: environment.yml
           activate-environment: crps-minimization
 
+      - name: Install pre-commit
+        run: pip install pre-commit
+
       - name: Run pre-commit hooks
         run: pre-commit run --all-files
 
