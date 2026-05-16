@@ -21,3 +21,4 @@ dependencies:
     - ngboost
     - scikit-posthocs
     - invoke
+    - pytest-cov
