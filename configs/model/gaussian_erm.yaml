@@ -1,0 +1,4 @@
+name: gaussian_erm
+fit_intercept: true
+max_iter: 1000
+tol: 1.0e-6

@@ -1,0 +1,5 @@
+name: linear_gaussian
+n: 500
+d: 10
+sigma: 1.0
+seed: 42
