@@ -1,0 +1,13 @@
+defaults:
+  - _self_
+  - data: linear_gaussian
+  - model: gaussian_erm
+
+experiment:
+  n_trials: 5
+  test_fraction: 0.2
+  seed: 42
+
+mlflow:
+  experiment_name: crps-minimization
+  tracking_uri: mlruns
