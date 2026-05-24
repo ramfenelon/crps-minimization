@@ -1,0 +1,4 @@
+name: heteroscedastic_gaussian
+n: 500
+d: 10
+seed: 42
