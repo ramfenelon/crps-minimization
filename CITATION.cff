@@ -2,20 +2,16 @@ cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
 type: software
 title: "CRPS Minimization"
-abstract: >
-  Code for empirical validation of generalisation theory for ERM
-  and penalised ERM in distributional regression under the CRPS.
+abstract: "Code for empirical validation of generalisation theory for ERM and penalised ERM in distributional regression under the CRPS."
 authors:
-  - family-names: "[Your surname]"
-    given-names: "[Your first name]"
-    orcid: "https://orcid.org/[your-orcid]"
+  - family-names: "Fenelon"
+    given-names: "Ralph"
 repository-code: "https://github.com/ramfenelon/crps-minimization"
 license: MIT
 version: "1.0.0"
-date-released: "2026-01-01"
+date-released: "2026-05-26"
 keywords:
   - distributional regression
   - empirical risk minimisation
   - CRPS
   - generalisation theory
-  - proper scoring rules
