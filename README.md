@@ -1,4 +1,5 @@
 ![CI](https://github.com/ramfenelon/crps-minimization/actions/workflows/ci.yml/badge.svg)
+[![DOI](https://zenodo.org/badge/1240585720.svg)](https://doi.org/10.5281/zenodo.20402443)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 # CRPS Minimization
@@ -136,14 +137,15 @@ crps-minimization/
 
 ## Citation
 
-If you use this code in your research, please cite:
+If you use this code, please cite:
 
 ```bibtex
-@article{[yourcitekey],
+@software{fenelon2026crps,
   author  = {[Your Name]},
-  title   = {[Paper Title]},
-  journal = {[Journal]},
-  year    = {[Year]},
+  title   = {CRPS Minimization},
+  year    = {2026},
+  doi     = {10.5281/zenodo.20402444},
+  url     = {https://github.com/ramfenelon/crps-minimization},
 }
 ```
 
