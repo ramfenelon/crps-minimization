@@ -18,7 +18,7 @@ def load_penalty_path_runs(
     experiment_name: str = "crps-minimization",
     dgp_name: str = "linear_gaussian",
     tracking_uri: str = "mlruns",
-    n: int = None,
+    n: int | None = None,
 ) -> pd.DataFrame:
     """
     Load all penalised ERM runs for a given DGP from MLflow.

@@ -69,7 +69,7 @@ def run_benchmark(
         "StudentT": lambda s: StudentTDGP(n=n, d=d, nu=4.0, seed=s),
     }
 
-    results = {}
+    results: dict[str, dict[str, float]] = {}
 
     for model_name, model in models.items():
         print(f"  Running {model_name}...")
@@ -81,7 +81,7 @@ def run_benchmark(
             for trial in range(n_trials):
                 trial_seed = seed + trial
                 dgp = dgp_factory(trial_seed)
-                X, y = dgp.sample()
+                X, y = dgp.sample()  # type: ignore[attr-defined]
 
                 n_test = n // 5
                 X_train, X_test = X[:-n_test], X[-n_test:]
