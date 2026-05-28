@@ -85,6 +85,11 @@ def get_git_sha() -> str:
 
 @hydra.main(config_path="../../configs", config_name="default", version_base=None)
 def main(cfg: DictConfig) -> None:
+    # Clear any run ID injected by Azure ML to avoid conflicts
+    import os
+
+    os.environ.pop("MLFLOW_RUN_ID", None)
+
     # Set up MLflow
     mlflow.set_tracking_uri(cfg.mlflow.tracking_uri)
     mlflow.set_experiment(cfg.mlflow.experiment_name)
