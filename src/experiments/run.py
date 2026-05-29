@@ -91,7 +91,9 @@ def main(cfg: DictConfig) -> None:
     os.environ.pop("MLFLOW_RUN_ID", None)
 
     # Set up MLflow
-    mlflow.set_tracking_uri(cfg.mlflow.tracking_uri)
+    # Use Azure ML tracking URI if injected, otherwise use config
+    tracking_uri = os.environ.get("MLFLOW_TRACKING_URI", cfg.mlflow.tracking_uri)
+    mlflow.set_tracking_uri(tracking_uri)
     mlflow.set_experiment(cfg.mlflow.experiment_name)
 
     with mlflow.start_run():

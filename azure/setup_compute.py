@@ -6,7 +6,7 @@ Run once from Git Bash:
 """
 
 from azure.ai.ml import MLClient
-from azure.ai.ml.entities import AmlCompute
+from azure.ai.ml.entities import AmlCompute, IdentityConfiguration
 from azure.identity import DefaultAzureCredential
 
 SUBSCRIPTION_ID = "e94d7bd0-e767-418f-86d1-c64056a0b776"
@@ -23,13 +23,15 @@ ml_client = MLClient(
 
 print("Creating compute cluster...")
 
+
 cluster = AmlCompute(
     name="crps-cluster",
     type="amlcompute",
-    size="Standard_DS2_v2",  # 2 vCPUs, 7GB RAM — cheapest; ~£0.10/hour
-    min_instances=0,  # scales to zero when idle — no cost when not running
+    size="Standard_DS2_v2",
+    min_instances=0,
     max_instances=4,
     idle_time_before_scale_down=120,
+    identity=IdentityConfiguration(type="system_assigned"),
 )
 
 poller = ml_client.begin_create_or_update(cluster)
